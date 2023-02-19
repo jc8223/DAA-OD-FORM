@@ -15,7 +15,7 @@ if (!empty($_POST['submit'])) {
 	$pdf = new FPDF();
 	$pdf->AddPage();
 	$pdf->SetFont("Arial", "", 15);
-	$pdf->Image('navLogoCircle.png',3,0,50);
+	$pdf->Image('Screenshot_20230218-113121_Drive.jpg',0,0,100,0);
 	
 	$pdf->Cell(0, 10, "To,", 0, 0);
 	$pdf->Cell(0,10,"Date : $date ",0,1,'R');
@@ -41,7 +41,6 @@ if (!empty($_POST['submit'])) {
 	$pdf->Cell(0, 10, "Kindly do the needful.", 0, 1);
 	$pdf->Cell(0, 10, "Thanking you in anticipation.", 0, 1);
 	$pdf->Cell(0, 10, "Yours sincerely,", 0, 1);
-	$pdf->Image('navLogoCircle.png', 0, 250, 210, 35, '', '', '', true, 1, '1', true, true, 1);
 
 	$pdf->Output();
 }
